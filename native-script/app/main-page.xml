@@ -1,16 +1,14 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
     <Page.actionBar>
-        <ActionBar title="Localized Remidners" icon="" class="action-bar">
-            <ActionItem tap="onHamburger" ios.systemIcon="9" ios.position="left" android.systemIcon="ic_menu_share" android.position="actionBar"></ActionItem>
-
+        <ActionBar title="Localized Reminders" icon="" class="action-bar">
             <android>
-                <NavigationButton icon="res://ic_menu" tap="showSideDrawer" />
+                <NavigationButton icon="res://ic_menu" tap="onHamburger" />
             </android>
             <ios>
-                <ActionItem icon="res://ic_menu" ios.position="left" tap="showSideDrawer" />
+                <ActionItem icon="res://ic_menu" ios.position="left" tap="onHamburger" />
             </ios>
 
-            <ActionItem tap="onSettings" ios.systemIcon="16" ios.position="right" text="Settings" android.position="popup"></ActionItem>
+            <ActionItem tap="onSettings" icon="res://ic_settings" ios.position="right" text="Settings" android.position="popup"></ActionItem>
         </ActionBar>
     </Page.actionBar>
     <!--
