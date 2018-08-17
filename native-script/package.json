@@ -1,6 +1,6 @@
 {
     "nativescript": {
-        "id": "org.nativescript.nativescript",
+        "id": "pl.mackode.nativescript",
         "tns-android": {
             "version": "4.2.0"
         },
@@ -9,8 +9,8 @@
         }
     },
     "description": "NativeScript Application",
-    "license": "SEE LICENSE IN <your-license-filename>",
-    "repository": "<fill-your-repository-here>",
+    "license": "SEE LICENSE IN LINCENSE",
+    "repository": "https://github.com/mackode/localized-reminders.git",
     "dependencies": {
         "nativescript-theme-core": "~1.0.4",
         "tns-core-modules": "~4.2.0"
