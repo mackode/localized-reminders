@@ -1,0 +1,24 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+    <Page.actionBar>
+        <ActionBar title="Localized Remidners" icon="" class="action-bar">
+            <ActionItem tap="onHamburger" ios.systemIcon="9" ios.position="left" android.systemIcon="ic_menu_share" android.position="actionBar"></ActionItem>
+            <ActionItem tap="onSettings" ios.systemIcon="16" ios.position="right" text="Settings" android.position="popup"></ActionItem>
+        </ActionBar>
+    </Page.actionBar>
+    <!--
+    The StackLayout stacks UI components on the screen—either vertically or horizontally.
+    In this case, the StackLayout does vertical stacking; you can change the stacking to
+    horizontal by applying a orientation="horizontal" attribute to the <StackLayout> element.
+    You can learn more about NativeScript layouts at
+    https://docs.nativescript.org/ui/layout-containers.
+
+    These components make use of several CSS class names that are part of the NativeScript
+    core theme, such as p-20, btn, h2, and text-center. You can view a full list of the
+    class names available for styling your app at https://docs.nativescript.org/ui/theme.
+    -->
+    <StackLayout class="p-20">
+        <Label text="Tap the button" class="h1 text-center"/>
+        <Button text="TAP" tap="{{ onTap }}" class="btn btn-primary btn-active"/>
+        <Label text="{{ message }}" class="h2 text-center" textWrap="true"/>
+    </StackLayout>
+</Page>
