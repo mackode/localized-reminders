@@ -27,11 +27,11 @@
         <Button text="TAP" tap="{{ onTap }}" class="btn btn-primary btn-active"/>
         <Label text="{{ message }}" class="h2 text-center" textWrap="true"/>
 
-        <ListView row="5" items="{{ mySecondItems }}" itemTap="secondListViewItemTap" class="list-group">
+        <ListView items="{{ groceryList }}" itemTemplateProperty="list-group" itemTap="navigateToTasks" separatorColor="white">
             <ListView.itemTemplate>
-                <StackLayout class="list-group-item">
-                    <Label text="{{ title || 'Downloading...' }}" textWrap="true" class="title" />
-                </StackLayout>
+                <template>
+                    <Label text="{{ name }}" class="list-group-item-heading"  />
+                </template>
             </ListView.itemTemplate>
         </ListView>
     </StackLayout>

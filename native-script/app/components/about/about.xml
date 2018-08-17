@@ -1,0 +1,8 @@
+<ActionBar title="About">
+    <NavigationButton text="Back" android.systemIcon="ic_menu_back"></NavigationButton>
+</ActionBar>
+<StackLayout>
+    <Label text="NativeScript Angular Example"></Label>
+    <Label text="Created by Nic Raboy"></Label>
+    <Label text="https://www.thepolyglotdeveloper.com"></Label>
+</StackLayout>

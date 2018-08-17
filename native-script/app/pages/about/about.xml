@@ -1,0 +1,12 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <Page.actionBar>
+        <ActionBar title="About">
+            <NavigationButton text="Back" android.systemIcon="ic_menu_back"></NavigationButton>
+        </ActionBar>
+    </Page.actionBar>
+    <StackLayout>
+        <Label text="NativeScript Example" />
+        <Label text="By Nic Raboy" />
+        <Label text="https://www.thepolyglotdeveloper.com" />
+    </StackLayout>
+</Page>

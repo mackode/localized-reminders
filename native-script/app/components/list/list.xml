@@ -1,0 +1,13 @@
+<ActionBar title="Hashes">
+    <ActionItem text="New" (tap)="save()" ios.position="right"></ActionItem>
+</ActionBar>
+<GridLayout>
+    <ListView [items]="items" (itemTap)="navigateToAbout()">
+        <template let-item="item">
+            <StackLayout>
+                <Label [text]="item.text"></Label>
+                <Label [text]="item.hash"></Label>
+            </StackLayout>
+        </template>
+    </ListView>
+</GridLayout>
