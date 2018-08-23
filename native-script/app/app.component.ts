@@ -1,21 +1,30 @@
-import {Component} from "@angular/core";
-import {RouteConfig} from "@angular/router-deprecated";
-import {NS_ROUTER_DIRECTIVES, NS_ROUTER_PROVIDERS} from "nativescript-angular/router";
-
-import {ListComponent} from "./components/list/list.component";
-import {AboutComponent} from "./components/about/about.component";
+import { Component, AfterViewInit } from "@angular/core";
+import { hasKey, getString, remove } from "application-settings";
+import { RouterExtensions } from "nativescript-angular/router";
+import * as app from "application";
 
 @Component({
-    selector: "my-app",
-    directives: [NS_ROUTER_DIRECTIVES],
-    providers: [NS_ROUTER_PROVIDERS],
-    template: "<page-router-outlet></page-router-outlet>"
+    moduleId: module.id,
+    selector: "sdk-app",
+    template: `
+        <page-router-outlet></page-router-outlet>
+    `
 })
 
-@RouteConfig([
-    { path: "/list", component: ListComponent, name: "List", useAsDefault: true },
-    { path: "/about", component: AboutComponent, name: "About" },
-])
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
+    constructor(private router: RouterExtensions) { }
 
+    ngAfterViewInit() {
+        app.on(app.resumeEvent, (args: app.ApplicationEventData) => {
+            this.launchExample();
+        });
+    }
+    
+    public launchExample() {
+        if (hasKey("gotoexample")) {
+            let value = getString("gotoexample");
+            remove("gotoexample");
+            this.router.navigate([value]);
+        }
+    }
 }
