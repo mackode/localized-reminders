@@ -16,15 +16,7 @@ export class AppComponent implements AfterViewInit {
 
     ngAfterViewInit() {
         app.on(app.resumeEvent, (args: app.ApplicationEventData) => {
-            this.launchExample();
+            this.router.navigate(['']);
         });
-    }
-    
-    public launchExample() {
-        if (hasKey("gotoexample")) {
-            let value = getString("gotoexample");
-            remove("gotoexample");
-            this.router.navigate([value]);
-        }
     }
 }
