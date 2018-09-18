@@ -12,7 +12,7 @@ export const routerConfig = [{
 @NgModule({
     schemas: [NO_ERRORS_SCHEMA],
     imports: [
-        /*TitleAndNavButtonModule,*/
+        TitleAndNavButtonModule,
         NativeScriptCommonModule,
         NativeScriptRouterModule,
         NativeScriptRouterModule.forChild(routerConfig)

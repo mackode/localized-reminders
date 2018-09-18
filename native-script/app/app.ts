@@ -2,8 +2,12 @@ import { platformNativeScriptDynamic } from "nativescript-angular/platform";
 import { on as applicationOn, launchEvent, suspendEvent, resumeEvent, exitEvent, lowMemoryEvent, uncaughtErrorEvent, ApplicationEventData } from "application";
 import { android, AndroidApplication, AndroidActivityBundleEventData, AndroidActivityEventData, AndroidActivityResultEventData, AndroidActivityBackPressedEventData } from "application";
 //import { ios } from "application";
-
+import { registerElement } from "nativescript-angular/element-registry";
 import { AppModule } from "./app.module";
+import { setCssFileName, start as applicationStart } from "tns-core-modules/application";
+
+registerElement("Fab", () => require("nativescript-floatingactionbutton").Fab);
+setCssFileName("./style.css");
 
 // Android activity events
 if (android) {

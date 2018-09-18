@@ -30,7 +30,7 @@ export class ToggleNavButtonDirective implements OnInit {
                 this.routerExtensions.backToPreviousPage();
             });
         } else if (app.ios) {
-            navigationButton.text = "";
+            navigationButton.text = "Test";
         }
 
         return navigationButton;
