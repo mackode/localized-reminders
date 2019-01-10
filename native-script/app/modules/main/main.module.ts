@@ -1,7 +1,7 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { NativeScriptCommonModule } from "nativescript-angular/common";
-import { MainComponent } from "../../components/main/main.component";
+import { MainComponent } from "../../components/main.page/main.component";
 import { TitleAndNavButtonModule } from "../../directives/title-and-nav-button.module";
 
 export const routerConfig = [{

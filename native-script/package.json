@@ -1,6 +1,6 @@
 {
   "nativescript": {
-    "id": "org.nativescript.nativescript",
+    "id": "pl.mackode.localized_reminders",
     "tns-android": {
       "version": "4.2.0"
     },

@@ -1,14 +1,11 @@
 import { Component, AfterViewInit } from "@angular/core";
-import { hasKey, getString, remove } from "application-settings";
 import { RouterExtensions } from "nativescript-angular/router";
 import * as app from "application";
 
 @Component({
     moduleId: module.id,
     selector: "sdk-app",
-    template: `
-        <page-router-outlet></page-router-outlet>
-    `
+    templateUrl: "app.component.html"
 })
 
 export class AppComponent implements AfterViewInit {
