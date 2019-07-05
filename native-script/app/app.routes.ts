@@ -2,13 +2,13 @@
 export const routes = [
     { 
         path: "", 
-        redirectTo: "/main", 
+        redirectTo: "main", 
         pathMatch: "full" 
     },
     
     {
-        path: "/main",
+        path: "main",
         loadChildren: "./modules/main/main.module#MainModule",
-        data: { title: "NativeScript Code Samples" }
+        data: { title: "Localized Reminders" }
     }
 ];
